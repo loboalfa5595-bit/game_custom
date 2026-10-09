@@ -1,0 +1,20 @@
+{
+  "name": "game-custom-bot",
+  "version": "1.0.0",
+  "private": true,
+  "main": "bundle.js",
+  "scripts": {
+    "start": "node bundle.js",
+    "bot": "node bundle.js",
+    "deploy": "node -e \"require('./bundle.js'); require('./deployCommandsStandalone.js');\" || node bundle.js",
+    "deploy:cmds": "node bundle.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.15.3",
+    "sql.js": "^1.10.3",
+    "dotenv": "^16.4.5"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  }
+}
